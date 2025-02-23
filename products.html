@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Mahum Knit Fashion - Product Listing Page</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <link rel="stylesheet" href="assets/css/custom-buttons.css">
+
+    </head>
+    <body>
+        
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                            <!--<li class="scroll-to-section"><a href="#men">Men's</a></li>
+                            <li class="scroll-to-section"><a href="#women">Women's</a></li>
+                            <li class="scroll-to-section"><a href="#kids">Kid's</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;">Pages</a>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="products.html">Products</a></li>
+                                    <li><a href="single-product.html">Single Product</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <a href="javascript:;">Features</a>
+                                <ul>
+                                    <li><a href="#">Features Page 1</a></li>
+                                    <li><a href="#">Features Page 2</a></li>
+                                    <li><a href="#">Features Page 3</a></li>
+                                    <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="scroll-to-section"><a href="index.html">Explore</a></li>
+                        </ul>-->
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2 style="color:#6082B6;">Check Our Products</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+
+    <!-- ***** Products Area Starts ***** -->
+    <section class="section" id="products">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Our Latest Products</h2>
+                        <div class="containerbtn">
+                            <button class="btn" onclick="filterProducts('all')">All</button>
+                            <button class="btn" onclick="filterProducts('t-shirt')">T-Shirt</button>
+                            <button class="btn" onclick="filterProducts('shirt')">Men's Shirt</button>
+                            <button class="btn" onclick="filterProducts('Men Tank Top')">Men's Tank Top</button>
+                            <button class="btn" onclick="filterProducts('jeans')">Men's Jeans</button>
+                            <button class="btn" onclick="filterProducts('Men Collar Polo')">Men's Collar Polo</button>
+                            <button class="btn" onclick="filterProducts('Men Hoodie')">Men's Hoodies</button>
+                            <button class="btn" onclick="filterProducts('Leather Jacket')">Leather Jackets</button>
+                            <button class="btn" onclick="filterProducts('Denim Jacket')">Denim Jackets</button>
+                            <button class="btn" onclick="filterProducts('Knit Sweater')">Knit Sweaters</button>
+                            <button class="btn" onclick="filterProducts('Women Collar Polo')">Women's Collar Polo</button>
+                            <button class="btn" onclick="filterProducts('Women Tank Top')">Women's Tank Top</button>
+                            <button class="btn" onclick="filterProducts('Women Denim Jeans')">Women's Denim Jeans</button>
+                            <button class="btn" onclick="filterProducts('Women Hoodie')">Women's Design Hoodies</button>
+                        </div>
+                        <h7 id="product-type"></h7>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" id="product-list">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+                <!--<div class="col-lg-12">
+                    <div class="pagination">
+                        <ul>
+                            <li class="active">
+                                <a href="#">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Products Area Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="assets/images/white-logo.png" alt="">
+                        </div>
+                        <ul>
+                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
+                            <li><a href="#">hexashop@company.com</a></li>
+                            <li><a href="#">010-020-0340</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Shopping &amp; Categories</h4>
+                    <ul>
+                        <li><a href="#">Men’s Shopping</a></li>
+                        <li><a href="#">Women’s Shopping</a></li>
+                        <li><a href="#">Kid's Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Tracking ID</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
+                        
+                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/slick.js"></script> 
+    <script src="assets/js/lightbox.js"></script> 
+    <script src="assets/js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+    </script>
+    <script>
+        function saveProducts(products) {
+    let uniqueProducts = [];
+    let seen = new Set();
+    
+    products.forEach(product => {
+        if (!seen.has(product.name)) {
+            seen.add(product.name);
+            uniqueProducts.push(product);
+        }
+    });
+
+    localStorage.setItem("products", JSON.stringify(uniqueProducts));
+}
+    </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        console.log("Products Page Loaded!");
+    
+        // Fetch the index.html file to extract product information
+        fetch("index.html")
+            .then(response => response.text())
+            .then(html => {
+                // Parse the HTML content
+                let parser = new DOMParser();
+                let doc = parser.parseFromString(html, "text/html");
+    
+                // Extract product items from index.html
+                let productItems = doc.querySelectorAll(".item");
+    
+                let productList = document.getElementById("product-list");
+                if (!productList) return;
+    
+                productList.innerHTML = ""; // Clear previous products
+    
+                // Centralized descriptions based on product type
+                const productDescriptions = {
+                "Shirt": "Fabric: 100% Cotton Fabric, Satin fabric, herringbone fabric, Polyester fabric, Lilen Fabric, Oxford fabric etc. High-quality sewing. Fashionable & Elegant Design. Made in: Bangladesh.",
+                "Jeans": "Fabric: Denim Cotton fabric, super soft stitch & non-stitch (depends on buyer requirement). GSM: 8 oz to 16 oz. High-quality sewing. Fashionable & Elegant Design. No color bleeding. Made in: Bangladesh.",
+                "Leather Jacket": "Fabric: Real leather, processed from animal hide. Quality varies based on tanning, dyeing, and finishing. Consumers should be aware of processing variations. High-quality sewing. Fashionable & Elegant Design. Made in: Bangladesh.",
+                "T-Shirt": "Fabric: Single Jersey Organic Cotton fabric. Print: 8-time wash guarantee. No color washout. High-quality print. GSM: 160 to 340. High-quality sewing. Fashionable & Elegant Design. Made in: Bangladesh.",
+                "Men Tank Top": "Fabric: Single jersey Cotton fabric & Ribbed cotton stretchy. GSM: 160 to 300. High-quality sewing. Fashionable & Elegant Design. Made in: Bangladesh.",
+                "Men Collar Polo": "Fabric: PK & LACOSTE Cotton fabric. GSM: 220 to 380. High-quality sewing. Fashionable & Elegant Design. Made in: Bangladesh.",
+                "Men Hoodie": "Fabric: Fleece or terry Cotton wash fabric. GSM: 220 to 420. High-quality sewing. Fashionable & Elegant Design. Made in: Bangladesh.",
+                "Knit Sweater": "Fabric: Processed as a strong knitted fabric, using natural fibers such as wool for reliable winter warmth. GSM: 160 to 370. High-quality sewing. Fashionable & Elegant Design. Made in: Bangladesh.",
+                "Denim Jacket": "Product Type: Denim Jackets for Men and Women. Fabric: 100% Cotton Denim, available in various weights and finishes for durability and comfort. High-Quality Sewing: Expertly crafted with precision stitching for long-lasting wear. Fashionable & Elegant Design: Timeless and versatile designs featuring button fronts, pocket details, and modern fits for a stylish, casual look. Made in: Bangladesh.",
+                "Women Collar Polo": "Fabric: PK & LACOSTE Cotton fabric. GSM: 220 to 380. High-quality sewing. Fashionable & Elegant Design. Made in: Bangladesh.",
+                "Women Tank Top": "Fabric: Single jersey Organic Cotton fabric. GSM: 160 to 220. High-quality sewing. Fashionable & Elegant Design. Made in: Bangladesh.",
+                "Women Denim Jeans": "Fabric: Denim Cotton fabric, super soft stitch & non-stitch (depends on buyer's requirement). GSM: 8 oz to 16 oz. High-quality sewing. Fashionable & Elegant Design. No color bleeding. Made in: Bangladesh.",
+                "Women Hoodie": "Fabric: Fleece or terry Cotton fabric. GSM: 220 to 390. High-quality sewing. Fashionable & Elegant Design. Made in: Bangladesh."
+            };
+    
+                // Loop through each product item and display it in products.html
+                productItems.forEach(item => {
+                    let productName = item.querySelector(".product-name")?.innerText || "Unknown Product";
+                    let productImage = item.querySelector(".product-image")?.src || "";
+                    let productType = item.querySelector(".product-image")?.dataset.type || "Unknown Type";
+                    let productDescription = productDescriptions[productType] || "No description available.";
+    
+                    let productHTML = `
+                        <div class="col-lg-4 product-item" data-category="${productType}">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <!--<li><a href="#" class="view-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#" class="fa fa-star"></a></li> -->
+                                            <li><a href="single-product.html?name=${encodeURIComponent(productName)}&image=${encodeURIComponent(productImage)}&type=${encodeURIComponent(productType)}&description=${encodeURIComponent(productDescription)}&imgbb=${encodeURIComponent(item.querySelector(".product-image")?.dataset.imgbb || "")}" class="add-to-cart">
+                            <i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="${productImage}" alt="${productName}" class="product-image">
+                                </div>
+                                <div class="down-content">
+                                    <div class="product-details">
+                                        <h4 class="product-name">${productName}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    productList.innerHTML += productHTML;
+                });
+            })
+            .catch(error => {
+                console.error("Error fetching index.html:", error);
+            });
+    });
+    </script>
+        <script>
+        function filterProducts(category) {
+    let productItems = document.querySelectorAll(".product-item");
+
+    productItems.forEach(item => {
+        if (category === "all" || item.getAttribute("data-category").toLowerCase() === category.toLowerCase()) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+    document.getElementById("product-type").innerText = category === "all" ? "All Products" : `Showing ${category} Products`;
+}
+let storedProducts = JSON.parse(localStorage.getItem("products")) || [];
+storedProducts = [...new Map(storedProducts.map(item => [item.name, item])).values()];
+localStorage.setItem("products", JSON.stringify(storedProducts));
+</script>
+<script>
+    function redirectToSingleProduct(name, image, type, description) {
+    // Encode parameters to prevent issues in URLs
+    let productUrl = `single-product.html?name=${name}&image=${image}&type=${type}&description=${description}`;
+
+    console.log("Redirecting to:", productUrl);
+
+    window.location.href = productUrl; // Redirect to single product page
+}
+</script>              
+</body>
+</html>

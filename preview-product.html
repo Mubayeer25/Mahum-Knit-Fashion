@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="" id="og-title">
+    <meta property="og:description" content="" id="og-description">
+    <meta property="og:image" content="" id="og-image">
+    <meta property="og:url" content="" id="og-url">
+    
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Product Preview</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productName = urlParams.get("name");
+            const productPrice = urlParams.get("price");
+            const productImage = urlParams.get("image");
+
+            if (productName && productPrice && productImage) {
+                // Update Open Graph meta tags dynamically
+                document.getElementById("og-title").setAttribute("content", productName);
+                document.getElementById("og-description").setAttribute("content", `Price: ৳${productPrice}`);
+                document.getElementById("og-image").setAttribute("content", productImage);
+                document.getElementById("og-url").setAttribute("content", window.location.href);
+
+                // Update the page content
+                document.getElementById("product-title").innerText = productName;
+                document.getElementById("product-price").innerText = `৳${productPrice}`;
+                document.getElementById("product-image").src = productImage;
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1 id="product-title"></h1>
+    <p id="product-price"></p>
+    <img id="product-image" src="" alt="Product Image" style="max-width: 100%; height: auto;">
+</body>
+</html>

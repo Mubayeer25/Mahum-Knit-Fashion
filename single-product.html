@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>MAHUM KNIT FASHION</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** 
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+     ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png">
+                        </a>
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="products.html">Products</a></li>
+                            <!--<li class="scroll-to-section"><a href="index.html">Women's</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Kid's</a></li>-->
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2 style="color:#6082B6;" id="product-name">Product Preview</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="left-images">
+                        <img id="product-image" src="" alt="Product Image">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="right-content">
+                        <h4 id="product-title"></h4>
+                        <span class="price" id="product-price" style="display: none;">৳0.00</span>
+                    <!-- Quantity Selection Buttons -->
+                     <!-- Product Information Section -->
+                     <div id="product-info">
+                        <h6>Product Type: <h7 id="product-type"></h7></h6>
+
+                        <h7 class="dotted-border">Product Description</h7>
+                        <ul id="product-description-list"></ul>
+                    </div>
+                    <h5>Select Quantity:</h5>
+                    <div class="quantity-options">
+                        <button class="button-89 quantity-btn" data-qty="500">500</button>
+                        <button class="button-89 quantity-btn" data-qty="1500">1500</button>
+                        <button class="button-89 quantity-btn" data-qty="5000">5000</button>
+                        <button class="button-89 quantity-btn" data-qty="10000">10000</button>
+                        <button class="button-89 quantity-btn" data-qty="15000">15000</button>
+                    </div>                                        
+
+                    <!-- Total Price -->
+                    <div class="total-price-container" style="display: none;">
+                        <span><h5>Total:</h5></span>
+                        <span id="total-price">৳0.00</span>
+                    </div>                    
+                            <div class="main-border-button">
+                                <button class="button-29 whatsapp-button" id="whatsapp-button" role="button">
+                                    <i class="fa fa-whatsapp"></i> Order on WhatsApp!
+                                </button>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2025 MAHUM KNIT FASHION, Ltd. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Single Product Page Loaded!");
+    
+            const urlParams = new URLSearchParams(window.location.search);
+            const productName = urlParams.get("name");
+            const productImage = urlParams.get("image");
+            const productType = urlParams.get("type");
+            const productDescription = urlParams.get("description");
+            const productImgBB = urlParams.get("imgbb"); // Extract the data-imgbb attribute
+    
+            console.log("Product Name:", productName);
+            console.log("Product Image:", productImage);
+            console.log("Product Type:", productType);
+            console.log("Product Description:", productDescription);
+            console.log("Product ImgBB:", productImgBB); // Log the ImgBB link
+    
+            if (productName && productImage) {
+                document.getElementById("product-title").innerText = decodeURIComponent(productName);
+                document.getElementById("product-image").src = decodeURIComponent(productImage);
+            }
+    
+            let productTypeElement = document.getElementById("product-type");
+            if (productTypeElement && productType) {
+                productTypeElement.innerText = decodeURIComponent(productType);
+            }
+    
+            let productDescriptionElement = document.getElementById("product-description-list");
+            if (productDescriptionElement && productDescription) {
+                productDescriptionElement.innerHTML = ""; 
+                try {
+                    let descriptionLines = productDescription.split(". "); 
+                    descriptionLines.forEach(line => {
+                        if (line.trim() !== "") {
+                            let listItem = document.createElement("li");
+                            listItem.innerHTML = `✅ ${line}`;
+                            productDescriptionElement.appendChild(listItem);
+                        }
+                    });
+                } catch (error) {
+                    console.error("Error processing description:", error);
+                    let listItem = document.createElement("li");
+                    listItem.innerHTML = "✅ No description available.";
+                    productDescriptionElement.appendChild(listItem);
+                }
+            }
+    
+            let selectedQuantity = 0;
+    
+            document.querySelectorAll(".quantity-btn").forEach(button => {
+                button.addEventListener("click", function () {
+                    selectedQuantity = this.dataset.qty;
+                    console.log(`Selected Quantity: ${selectedQuantity}`);
+                });
+            });
+    
+            document.getElementById("whatsapp-button").addEventListener("click", function (event) {
+                event.preventDefault();
+    
+                try {
+                    const message = `Hi, I am interested in this product:\n*${decodeURIComponent(productName)}*\nProduct Type: ${decodeURIComponent(productType)}\nSelected Quantity: ${selectedQuantity}\nProduct Image: ${decodeURIComponent(productImgBB)}`; // Use the ImgBB link here
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=+8801737545215&text=${encodeURIComponent(message)}`;
+                    console.log("WhatsApp URL:", whatsappUrl);
+                    window.open(whatsappUrl, "_blank");
+                } catch (error) {
+                    console.error("Error generating WhatsApp URL:", error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

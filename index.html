@@ -22,6 +22,78 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
+    <style>
+        body  {
+            background-image: url('https://images.pexels.com/photos/8760875/pexels-photo-8760875.jpeg');
+            background-size: cover;
+            -webkit-animation: slidein 100s;
+            animation: slidein 100s;
+
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;              
+        }
+
+        @-webkit-keyframes slidein {
+            from {background-position: top; background-size:3000px; }
+            to {background-position: -100px 0px;background-size:2750px;}
+        }
+
+        @keyframes slidein {
+            from {background-position: top;background-size:3000px; }
+            to {background-position: -100px 0px;background-size:2750px;}
+        }
+
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(75, 75, 250, 0.3);
+            border-radius: 3px;
+        }
+        
+        .center h1 {
+            text-align: center;
+            color: white;
+            font-family: 'Source Code Pro', monospace;
+            text-transform: uppercase;
+        }
+        
+        /* Make sure content is visible over the sliding background */
+        .header-area,
+        .page-heading,
+        .contact-us,
+        .subscribe {
+            position: relative;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        
+        /* Keep the footer as it was (with black background) */
+        footer {
+            position: relative;
+            z-index: 10;
+            /* The original styling for footer will be preserved from templatemo.css */
+        }
+        
+        /* Adjust the preloader to not interfere with animation */
+        #preloader {
+            z-index: 999;
+        }
+    </style>
 
     </head>
     
